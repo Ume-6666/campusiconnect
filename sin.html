@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus I Connect | Auth</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4">
+
+  <!-- Auth Card -->
+  <div class="w-full max-w-lg bg-white rounded-2xl shadow-2xl p-8 relative overflow-hidden">
+
+    <!-- Heading -->
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-extrabold text-gray-800">Campus I Connect</h1>
+      <p class="text-gray-500 mt-1">Your smart campus portal</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex justify-around mb-6">
+      <button id="loginTab" class="w-1/2 py-2 font-semibold text-purple-600 border-b-2 border-purple-600">Login</button>
+      <button id="signupTab" class="w-1/2 py-2 font-semibold text-gray-500 hover:text-purple-600">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="space-y-4">
+      <input type="email" name="email" placeholder="Email" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+      <input type="password" name="password" placeholder="Password" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+
+      <button class="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-lg py-3 font-semibold shadow-md transition">
+        Sign In
+      </button>
+
+      <div class="flex justify-between text-sm text-gray-500 mt-2">
+        <p id="forgotLink" class="cursor-pointer hover:text-purple-600">Forgot Password?</p>
+        <button id="adminDemo" type="button" class="hover:text-purple-600">Admin Demo</button>
+      </div>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupForm" class="space-y-4 hidden">
+      <input type="text" name="name" placeholder="Full Name" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+      <input type="email" name="email" placeholder="Email" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+      <input type="tel" name="phone" placeholder="Phone Number" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+      <select name="role" required
+              class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+        <option value="">Select Role</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="admin">Admin</option>
+      </select>
+      <input type="password" name="password" placeholder="Password" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+      <input type="password" name="confirm" placeholder="Confirm Password" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+
+      <button class="w-full bg-green-500 hover:bg-green-600 text-white rounded-lg py-3 font-semibold shadow-md transition">
+        Create Account
+      </button>
+    </form>
+
+    <!-- Forgot Password Form -->
+    <form id="forgotForm" class="space-y-4 hidden">
+      <p class="text-gray-600 text-center">Enter your registered email, we will send reset instructions.</p>
+      <input type="email" name="email" placeholder="Email" required
+             class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500">
+
+      <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg py-3 font-semibold shadow-md transition">
+        Send Reset Link
+      </button>
+
+      <p id="backToLogin" class="text-sm text-center text-gray-500 cursor-pointer hover:text-purple-600">← Back to Login</p>
+    </form>
+
+    <!-- Status -->
+    <p id="authStatus" class="mt-4 text-center text-sm"></p>
+  </div>
+
+  <!-- Script -->
+  <script type="module">
+    import { apiJson, setStatus } from './api.js';
+
+    const loginTab = document.getElementById('loginTab');
+    const signupTab = document.getElementById('signupTab');
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    const forgotForm = document.getElementById('forgotForm');
+    const statusEl = document.getElementById('authStatus');
+    const forgotLink = document.getElementById('forgotLink');
+    const backToLogin = document.getElementById('backToLogin');
+
+    // Tab switch
+    loginTab.addEventListener('click', () => {
+      loginForm.classList.remove('hidden');
+      signupForm.classList.add('hidden');
+      forgotForm.classList.add('hidden');
+      loginTab.classList.add('text-purple-600','border-b-2','border-purple-600');
+      signupTab.classList.remove('text-purple-600','border-b-2','border-purple-600');
+      signupTab.classList.add('text-gray-500');
+      statusEl.textContent = "";
+    });
+
+    signupTab.addEventListener('click', () => {
+      signupForm.classList.remove('hidden');
+      loginForm.classList.add('hidden');
+      forgotForm.classList.add('hidden');
+      signupTab.classList.add('text-purple-600','border-b-2','border-purple-600');
+      loginTab.classList.remove('text-purple-600','border-b-2','border-purple-600');
+      loginTab.classList.add('text-gray-500');
+      statusEl.textContent = "";
+    });
+
+    // Forgot Password
+    forgotLink.addEventListener('click', () => {
+      loginForm.classList.add('hidden');
+      signupForm.classList.add('hidden');
+      forgotForm.classList.remove('hidden');
+      loginTab.classList.remove('text-purple-600','border-b-2','border-purple-600');
+      signupTab.classList.remove('text-purple-600','border-b-2','border-purple-600');
+    });
+
+    backToLogin.addEventListener('click', () => loginTab.click());
+
+    // Login submit
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const body = Object.fromEntries(new FormData(loginForm).entries());
+      try {
+        const data = await apiJson('/api/auth/login', 'POST', body);
+        localStorage.setItem('token', data.token);
+        setStatus(statusEl, "✅ Logged in! Redirecting...", true);
+        setTimeout(()=> location.href='cicp.html', 700);
+      } catch (err) {
+        setStatus(statusEl, "❌ " + err.message, false);
+      }
+    });
+
+    // Signup submit
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const body = Object.fromEntries(new FormData(signupForm).entries());
+      if (body.password !== body.confirm) {
+        setStatus(statusEl, "❌ Passwords do not match", false);
+        return;
+      }
+      try {
+        const data = await apiJson('/api/auth/register', 'POST', body);
+        setStatus(statusEl, "✅ Account created! Please login.", true);
+        signupTab.classList.remove('text-purple-600');
+        loginTab.click();
+      } catch (err) {
+        setStatus(statusEl, "❌ " + err.message, false);
+      }
+    });
+
+    // Forgot Password submit
+    forgotForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const body = Object.fromEntries(new FormData(forgotForm).entries());
+      try {
+        await apiJson('/api/auth/forgot-password', 'POST', body);
+        setStatus(statusEl, "✅ Reset link sent to your email!", true);
+      } catch (err) {
+        setStatus(statusEl, "❌ " + err.message, false);
+      }
+    });
+
+    // Admin Demo login
+    document.getElementById('adminDemo').addEventListener('click', async () => {
+      try {
+        const data = await apiJson('/api/auth/admin/login','POST', { email:'admin@campusiconnect.local', password:'Admin@123' });
+        localStorage.setItem('adminToken', data.token);
+        alert('✅ Admin JWT stored. You can now call admin APIs from devtools.');
+      } catch (e) { alert("❌ " + e.message); }
+    });
+  </script>
+</body>
+</html>
