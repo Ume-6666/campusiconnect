@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Campus I Connect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6ad02.js" crossorigin="anonymous"></script>
+
+  <style>
+    .btn-glow { transition: all 0.3s ease-in-out; }
+    .btn-glow:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,255,255,0.6); }
+
+    .card-hover { position: relative; overflow: hidden; }
+    .card-hover::before {
+      content: ""; position: absolute; inset: 0; border-radius: 16px; padding: 2px;
+      background: linear-gradient(45deg, #9333ea, #ec4899, #ef4444);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      transition: opacity 0.4s; opacity: 0;
+    }
+    .card-hover:hover::before { opacity: 1; }
+    .card-hover:hover { transform: translateY(-8px) scale(1.03) rotate(-1deg); transition: all 0.4s; }
+
+    .testimonial-hover { transition: all 0.4s; }
+    .testimonial-hover:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 10px 25px rgba(147,51,234,0.2); }
+
+    .counter:hover { transform: scale(1.1); transition: transform 0.3s; }
+
+    footer p { display: inline-block; position: relative; }
+    footer p::after {
+      content: ""; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: white; transition: width 0.3s;
+    }
+    footer p:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] flex items-center justify-center text-white">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="d0cb0070-95d6-4636-b895-0f1072581b5f.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 text-center px-6">
+      <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">About Campus I Connect</h1>
+      <p class="max-w-2xl mx-auto text-lg text-gray-200" data-aos="fade-up" data-aos-delay="200">
+        Empowering students with skills, internships, and placements to shape future leaders of tomorrow.
+      </p>
+      <div class="mt-6">
+        <a href="programs.html" class="btn-glow inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-semibold shadow-lg">
+          Explore Programs
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl shadow-lg">
+    <!-- Text Content -->
+    <div data-aos="fade-right" class="space-y-4">
+      <h2 class="text-4xl font-extrabold text-purple-700 mb-4">Who <span class="text-pink-500">We Are</span></h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        At <span class="font-semibold text-purple-600">Campus I Connect</span>, we empower students with 
+        <span class="text-pink-500 font-medium">technical skills</span>, 
+        <span class="text-purple-600 font-medium">real-world internships</span>, and 
+        <span class="text-pink-500 font-medium">placement guidance</span>.  
+        Our mission is to bridge the gap between academics and industry by providing hands-on learning and career mentorship.
+      </p>
+      <a href="programs.html" class="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform">
+        Explore Programs
+      </a>
+    </div>
+  
+    <!-- Image Content -->
+    <div data-aos="fade-left" class="relative group">
+      <img src="logos.jpg" class="rounded-3xl shadow-xl transform transition-transform duration-500 group-hover:scale-105"/>
+      <!-- Floating Icons -->
+      <div class="absolute top-4 left-4 bg-white p-2 rounded-full shadow-md">
+        <img src="https://img.icons8.com/color/48/education.png" class="w-8 h-8"/>
+      </div>
+      <div class="absolute bottom-4 right-8 bg-white p-2 rounded-full shadow-md">
+        <img src="https://img.icons8.com/color/48/internship.png" class="w-8 h-8"/>
+      </div>
+      <div class="absolute top-8 right-10 bg-white p-2 rounded-full shadow-md">
+        <img src="https://img.icons8.com/color/48/briefcase.png" class="w-8 h-8"/>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Mission / Vision / Values -->
+  <section class="grid md:grid-cols-3 gap-8 container mx-auto px-6 py-12">
+    <div class="bg-white rounded-2xl shadow-lg p-8 transition card-hover" data-aos="zoom-in">
+      <img src="https://img.icons8.com/color/96/mission-of-a-company.png" class="w-16 mb-4 mx-auto">
+      <h3 class="text-xl font-bold text-purple-600">Our Mission</h3>
+      <p class="mt-3 text-gray-600">To train and mentor students with career-ready skills and prepare them for placements in top companies.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-8 transition card-hover" data-aos="zoom-in" data-aos-delay="200">
+      <img src="https://img.icons8.com/color/96/goal--v1.png" class="w-16 mb-4 mx-auto">
+      <h3 class="text-xl font-bold text-purple-600">Our Vision</h3>
+      <p class="mt-3 text-gray-600">To become India’s leading skill academy and placement platform, connecting students with 500+ hiring partners.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-8 transition card-hover" data-aos="zoom-in" data-aos-delay="400">
+      <img src="https://img.icons8.com/color/96/values.png" class="w-16 mb-4 mx-auto">
+      <h3 class="text-xl font-bold text-purple-600">Our Values</h3>
+      <p class="mt-3 text-gray-600">Excellence, mentorship, innovation, and student-first approach define everything we do.</p>
+    </div>
+  </section>
+
+  <!-- Counters -->
+  <section class="bg-gradient-to-r from-purple-100 to-pink-100 py-16">
+    <div class="container mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <div data-aos="fade-up">
+        <img src="https://img.icons8.com/color/96/student-male--v1.png" class="w-16 mx-auto mb-2">
+        <h3 class="text-5xl font-extrabold text-purple-700 counter" data-target="5000">0</h3>
+        <p class="text-gray-600 mt-2">Students Trained</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <img src="https://img.icons8.com/color/96/conference.png" class="w-16 mx-auto mb-2">
+        <h3 class="text-5xl font-extrabold text-purple-700 counter" data-target="100">0</h3>
+        <p class="text-gray-600 mt-2">Hiring Partners</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400">
+        <img src="https://img.icons8.com/color/96/medal2.png" class="w-16 mx-auto mb-2">
+        <h3 class="text-5xl font-extrabold text-purple-700 counter" data-target="2000">0</h3>
+        <p class="text-gray-600 mt-2">Successful Placements</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <!-- Testimonials -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-purple-700 mb-10" data-aos="fade-up">What Our Students Say</h2>
+      <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+        <div class="swiper-wrapper">
+  
+          <!-- Shivani -->
+          <div class="swiper-slide bg-white p-8 rounded-2xl shadow-lg testimonial-hover">
+            <img src="shi.png" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-600">
+            <h3 class="text-lg font-bold text-purple-600">Shivani Dangi</h3>
+            <p class="text-sm text-gray-600 italic">B.Tech 2nd Year</p>
+            <p class="mt-3 text-gray-700">"The coaching is excellent. With their guidance, I got internships at Wyreflow, Amazon, Celebal, Infosys."</p>
+            <div class="flex justify-center mt-3 text-yellow-400 space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+            </div>
+          </div>
+  
+          <!-- Ragini -->
+          <div class="swiper-slide bg-white p-8 rounded-2xl shadow-lg testimonial-hover">
+            <img src="ragni.png" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-600">
+            <h3 class="text-lg font-bold text-purple-600">Ragini Namdeo</h3>
+            <p class="text-sm text-gray-600 italic">B.Tech CSE – VNS Group</p>
+            <p class="mt-3 text-gray-700">"My technical knowledge and confidence boosted. Thank you for guiding me towards my dream area."</p>
+            <div class="flex justify-center mt-3 text-yellow-400 space-x-1">
+              <!-- SVG Stars Same as Shivani -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+            </div>
+          </div>
+  
+          <!-- Harshit -->
+          <div class="swiper-slide bg-white p-8 rounded-2xl shadow-lg testimonial-hover">
+            <img src="ha.png" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-600">
+            <h3 class="text-lg font-bold text-purple-600">Harshit Lokhande</h3>
+            <p class="text-sm text-gray-600 italic">Placed at LTI Mindtree</p>
+            <p class="mt-3 text-gray-700">"I learned SQL & programming at Campus I Connect. It helped me crack LTI Mindtree & Hoonartek."</p>
+            <div class="flex justify-center mt-3 text-yellow-400 space-x-1">
+              <!-- Same SVG Stars -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+            </div>
+          </div>
+  
+          <!-- Aman -->
+          <div class="swiper-slide bg-white p-8 rounded-2xl shadow-lg testimonial-hover">
+            <img src="https://randomuser.me/api/portraits/men/21.jpg" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-600">
+            <h3 class="text-lg font-bold text-purple-600">Aman Sen</h3>
+            <p class="text-sm text-gray-600 italic">Placed at LTI Mindtree</p>
+            <p class="mt-3 text-gray-700">"Alok Sir’s mentorship gave me solid SQL skills. I secured offers from LTI Mindtree & Info Origin."</p>
+            <div class="flex justify-center mt-3 text-yellow-400 space-x-1">
+              <!-- Same SVG Stars -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+            </div>
+          </div>
+  
+          <!-- Zoha -->
+          <div class="swiper-slide bg-white p-8 rounded-2xl shadow-lg testimonial-hover">
+            <img src="https://randomuser.me/api/portraits/women/55.jpg" class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-600">
+            <h3 class="text-lg font-bold text-purple-600">Zoha</h3>
+            <p class="text-sm text-gray-600 italic">Placed at Bigscal</p>
+            <p class="mt-3 text-gray-700">"Learning SQL here boosted my confidence. I got placed at Hoonartek and Bigscal."</p>
+            <div class="flex justify-center mt-3 text-yellow-400 space-x-1">
+              <!-- Same SVG Stars -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.23 3.794h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.347 1.23 3.794c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.222 2.443c-.784.57-1.838-.197-1.539-1.118l1.23-3.794-3.23-2.347c-.783-.57-.38-1.81.588-1.81h3.993l1.23-3.794z"/></svg>
+            </div>
+          </div>
+  
+        </div>
+        <!-- Swiper Navigation -->
+        <div class="swiper-button-next text-purple-700"></div>
+        <div class="swiper-button-prev text-purple-700"></div>
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .testimonial-hover {
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .testimonial-hover:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+    }
+  </style>
+  
+
+  <!-- Footer -->
+  <footer class="bg-purple-700 text-white py-8 text-center space-y-3">
+    <p>© 2025 Campus I Connect. All Rights Reserved.</p>
+    <div class="flex justify-center space-x-4">
+      <a href="#" class="hover:text-pink-300"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="#" class="hover:text-pink-300"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="#" class="hover:text-pink-300"><i class="fab fa-youtube fa-lg"></i></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const speed = 50;
+        if(count < target){
+          counter.innerText = count + Math.ceil(target / 100);
+          setTimeout(updateCount, speed);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+
+    // Swiper Init
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: { delay: 3000 },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+  </script>
+</body>
+</html>
