@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Campus I Connect – Empowering Skills, Training, and Placements for Students across India">
+  <title>Campus I Connect | Skills & Placements</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-pink-100 via-purple-100 to-blue-100 text-gray-900">
+
+  <!-- Header -->
+  <!-- Header -->
+<header class="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-600 text-white p-4 shadow-2xl backdrop-blur-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    
+    <!-- Logo + Title -->
+    <a href="index.html" class="flex items-center space-x-4">
+      <img src="logos.jpg" alt="Campus I Connect Logo" 
+           class="h-20 w-auto object-contain shadow-lg border-2 border-white">
+      <!-- <span class="text-3xl font-extrabold tracking-wide">
+        Campus <span class="text-yellow-300">I</span> Connect
+      </span> -->
+    </a>
+    
+    <!-- Navigation -->
+    <nav class="space-x-6 font-semibold text-lg">
+      <a href="about.html" class="relative group">
+        About
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#courses" class="relative group">
+        Courses
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#placements" class="relative group">
+        Placements
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#jobs" class="relative group">
+        Jobs
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="contec.html" class="relative group">
+        Contact
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="sin.html" class="bg-yellow-400 text-purple-900 px-5 py-2 rounded-full shadow-md hover:bg-yellow-300 transition duration-300">
+        Login / SignUp
+      </a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+  <!-- Hero Section -->
+  <section class="py-16 text-center bg-gradient-to-r from-yellow-100 via-pink-200 to-purple-100">
+    <h2 class="text-4xl font-extrabold text-purple-800 mb-4">Upskill. Get Trained. Get Placed.</h2>
+    <p class="max-w-xl mx-auto mb-6 text-lg text-gray-700">India’s #1 platform for career-ready skills, certified
+      training, and 100+ hiring partners. Let’s start your journey today!</p>
+    <a href="reg.html"
+      class="bg-purple-700 text-white px-8 py-3 rounded-full text-lg shadow-lg hover:bg-purple-800">Join Now</a>
+  </section>
+
+  
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-pink-600 mb-4">Who We Are</h3>
+      <p class="text-gray-700 text-lg">Campus I Connect is an innovative career development hub offering expert-led
+        training, hands-on projects, and guaranteed placement support in IT, Engineering, and Management fields.</p>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+<!-- Courses Section -->
+<!-- Courses Section -->
+<section id="courses" class="bg-gradient-to-br from-green-100 via-yellow-100 to-pink-100 py-16">
+  <div class="max-w-6xl mx-auto text-center">
+    <h3 class="text-3xl font-extrabold text-green-700 mb-12 tracking-wide">
+      🚀 Our Trending Courses
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <!-- Course 1 -->
+      <div onclick="openModal('Web Development','MERN Stack & Java Full Stack with real projects, internships, and placement support.')" 
+           class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-purple-500 
+                  transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:border-pink-500 
+                  cursor-pointer active:scale-95">
+        <h4 class="font-bold text-xl mb-2 text-purple-700">Web Development</h4>
+        <p class="text-gray-600">MERN Stack & Java Full Stack</p>
+      </div>
+
+      <!-- Course 2 -->
+      <div onclick="openModal('Technical Training','C, C++, Java, Python, Data Structures, DBMS, SQL and more with hands-on coding.')" 
+           class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-purple-500 hover:border-green-500 transition cursor-pointer">
+        <h4 class="font-bold text-xl mb-2 text-purple-700">Technical Training</h4>
+        <p class="text-gray-600">C, C++, Java, Python, Data Structure, DBMS/RDBMS, SQL etc</p>
+      </div>
+
+      <!-- Course 3 -->
+      <div onclick="openModal('English Communication','Improve spoken English, grammar, vocabulary and interview communication skills.')" 
+           class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-purple-500 hover:border-yellow-500 transition cursor-pointer">
+        <h4 class="font-bold text-xl mb-2 text-purple-700">English</h4>
+        <p class="text-gray-600">English/Communication Classes</p>
+      </div>
+
+      <!-- Course 4 -->
+      <div onclick="openModal('SoftSkill Training','Personality Development, GDs, Mock Interviews, Interview Skills & more to boost confidence.')" 
+           class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-purple-500 hover:border-red-500 transition cursor-pointer">
+        <h4 class="font-bold text-xl mb-2 text-purple-700">SoftSkill Training</h4>
+        <p class="text-gray-600">Personality Development, Group Discussion, Mock Interviews, Interview Skills & More...</p>
+      </div>
+
+      <!-- Course 5 -->
+      <div onclick="openModal('Mechanical Design (CAD)','SolidWorks, CATIA, AutoCAD, ANSYS with live design projects and certification.')" 
+           class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-pink-500 hover:border-blue-500 transition cursor-pointer">
+        <h4 class="font-bold text-xl mb-2 text-pink-600">Mechanical Design (CAD)</h4>
+        <p class="text-gray-600">SolidWorks, CATIA, AutoCAD, ANSYS</p>
+      </div>
+
+      <!-- Course 6 -->
+      <div onclick="openModal('Digital Marketing','SEO, Google Ads, Social Media Marketing, Analytics with practical campaigns.')" 
+           class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-yellow-500 hover:border-purple-500 transition cursor-pointer">
+        <h4 class="font-bold text-xl mb-2 text-yellow-600">Digital Marketing</h4>
+        <p class="text-gray-600">SEO, Google Ads, Social Media, Analytics</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Popup -->
+<div id="courseModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
+  <div class="bg-white/20 backdrop-blur-xl rounded-2xl p-8 shadow-2xl max-w-lg w-full border border-white/30 relative animate-fadeIn">
+    
+    <!-- Close Button -->
+    <button onclick="closeModal()" class="absolute top-3 right-3 text-white text-xl font-bold hover:scale-110 transition">✖</button>
+    
+    <!-- Modal Content -->
+    <h3 id="modalTitle" class="text-2xl font-bold text-white mb-4"></h3>
+    <p id="modalDescription" class="text-white/90 mb-6"></p>
+    
+    <button class="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-600 text-white px-6 py-2 rounded-xl shadow-lg hover:scale-105 transition">
+      Apply Now 🚀
+    </button>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function openModal(title, description) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+    document.getElementById("courseModal").classList.remove("hidden");
+  }
+  function closeModal() {
+    document.getElementById("courseModal").classList.add("hidden");
+  }
+</script>
+
+<!-- Extra Animation -->
+<style>
+  .animate-fadeIn {
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+
+
+
+
+  <!-- Jobs Section -->
+<!-- Jobs Section -->
+<section id="jobs" class="py-16 bg-white text-center">
+  <h3 class="text-3xl font-bold text-blue-700 mb-6">Latest Job Openings</h3>
+  <p class="text-gray-700 mb-10">Apply for fresh and experienced roles in top companies partnered with us.</p>
+
+  <!-- Grid for Jobs -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Job Card -->
+    <div
+      class="job-card bg-blue-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-blue-700">Software Engineer</h4>
+      <p class="text-gray-600">TCS | Mumbai | 0-2 years</p>
+      <button onclick="openModal('Software Engineer at TCS')"
+        class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+    <div
+      class="job-card bg-pink-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-pink-700">Mechanical Design Engineer</h4>
+      <p class="text-gray-600">L&T | Pune | 1-3 years</p>
+      <button onclick="openModal('Mechanical Engineer at L&T')"
+        class="mt-4 bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+    <div
+      class="job-card bg-green-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-green-700">Digital Marketing Executive</h4>
+      <p class="text-gray-600">Wipro | Bangalore | 0-1 year</p>
+      <button onclick="openModal('Digital Marketing at Wipro')"
+        class="mt-4 bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+    <!-- Extra IT Jobs -->
+    <div
+      class="job-card bg-yellow-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-yellow-700">Frontend Developer</h4>
+      <p class="text-gray-600">Infosys | Hyderabad | 1-2 years</p>
+      <button onclick="openModal('Frontend Developer at Infosys')"
+        class="mt-4 bg-yellow-600 text-white px-6 py-2 rounded-full hover:bg-yellow-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+    <div
+      class="job-card bg-purple-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-purple-700">Backend Developer</h4>
+      <p class="text-gray-600">Capgemini | Noida | 2-4 years</p>
+      <button onclick="openModal('Backend Developer at Capgemini')"
+        class="mt-4 bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+    <div
+      class="job-card bg-red-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-red-700">Cloud Engineer</h4>
+      <p class="text-gray-600">Tech Mahindra | Chennai | 0-2 years</p>
+      <button onclick="openModal('Cloud Engineer at Tech Mahindra')"
+        class="mt-4 bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+    <div
+      class="job-card bg-indigo-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-indigo-700">Data Analyst</h4>
+      <p class="text-gray-600">HCL | Bangalore | 1-3 years</p>
+      <button onclick="openModal('Data Analyst at HCL')"
+        class="mt-4 bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+    <div
+      class="job-card bg-teal-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-teal-700">AI/ML Engineer</h4>
+      <p class="text-gray-600">Google | Bangalore | 2-5 years</p>
+       <button onclick="openModal('Data Analyst at HCL')"
+        class="mt-4 bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+
+    <div
+      class="job-card bg-indigo-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+      <h4 class="font-bold text-lg mb-2 text-indigo-700">Data Science</h4>
+      <p class="text-gray-600">HCL | Bangalore | 1-3 years</p>
+      <button onclick="openModal('Data Analyst at HCL')"
+        class="mt-4 bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition duration-300">Apply
+        Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="applyModal"
+  class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+  <div class="bg-white rounded-xl shadow-xl p-8 w-96 relative">
+    <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500">✖</button>
+    <h3 id="jobTitle" class="text-xl font-bold text-blue-700 mb-4">Apply Now</h3>
+    <form id="jobApplyForm" class="space-y-4" enctype="multipart/form-data">
+      <input type="text" placeholder="Full Name" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+      <input type="email" placeholder="Email" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+      <input type="tel" placeholder="Phone Number" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+      <textarea placeholder="Why should we hire you?" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function openModal(job) {
+    document.getElementById('applyModal').classList.remove('hidden');
+    document.getElementById('applyModal').classList.add('flex');
+    document.getElementById('jobTitle').innerText = "Apply for " + job;
+  }
+
+  function closeModal() {
+    document.getElementById('applyModal').classList.remove('flex');
+    document.getElementById('applyModal').classList.add('hidden');
+  }
+</script>
+
+<!-- Placements Section with Sliding Logos -->
+<section id="placements" class="py-16 bg-gradient-to-t from-blue-50 to-white text-center overflow-hidden">
+  <h3 class="text-3xl font-bold text-blue-600 mb-6">100+ Companies Hiring Our Students</h3>
+  <p class="text-gray-700 mb-8">
+    Join a growing network of successful alumni placed in top MNCs and startups across India.
+  </p>
+
+  <!-- Sliding Container -->
+  <div class="relative w-full overflow-hidden">
+    <div class="flex animate-slide gap-12">
+      <!-- Company Logos -->
+      <img src="INFOSYS.jpeg" alt="Infosys" class="h-16">
+      <img src="tCS.png" alt="TCS" class="h-16">
+      <img src="cap" alt="Capgemini" class="h-16">
+      <img src="Wipro.jpeg" alt="Wipro" class="h-16">
+      <img src="tech metra.jpeg" alt="Tech Mahindra" class="h-16">
+      <img src="HCL.jpeg" alt="HCL" class="h-16">
+      <img src="Accenture.jpeg" alt="Accenture" class="h-16">
+      <img src="Mindtree.jpeg" alt="Mindtree" class="h-16">
+    </div>
+  </div>
+</section>
+
+<!-- Tailwind Custom Animation -->
+<style>
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+</style>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gradient-to-t from-purple-100 via-pink-100 to-blue-100 py-16">
+    <div class="max-w-xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-purple-700 mb-4">Get in Touch</h3>
+      <p class="mb-6 text-gray-700 text-lg">Fill out the form and our team will get back to you shortly.</p>
+      <form class="space-y-4 text-left">
+        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg border border-gray-300" required />
+        <input type="email" placeholder="Email Address" class="w-full p-4 rounded-lg border border-gray-300" required />
+        <textarea placeholder="Your Message" class="w-full p-4 rounded-lg border border-gray-300"
+          rows="4"></textarea>
+        <button
+          class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-full hover:from-pink-600 hover:to-purple-700 shadow-md">Send
+          Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+<footer class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="text-2xl font-bold border-b-2 border-yellow-400 inline-block pb-1 mb-4">Contact Us</h4>
+      <ul class="space-y-3">
+        <li class="flex items-center space-x-3">
+          <span>📞</span>
+          <span>8602589579, 7987251109, 9685401109</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <span>📧</span>
+          <a href="mailto:campusiconnect9@gmail.com" class="hover:text-yellow-300 transition">
+            campusiconnect9@gmail.com
+          </a>
+        </li>
+        <li class="flex items-start space-x-3">
+          <span>📍</span>
+          <span>HIG-F-1, Shridhar Mohini Parisar, C-Sector, Indrapuri, Bhopal</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Useful Links -->
+    <div>
+      <h4 class="text-2xl font-bold border-b-2 border-yellow-400 inline-block pb-1 mb-4">Useful Links</h4>
+      <ul class="space-y-3">
+        <li>
+          <a href="https://www.primehour24.com/category/job-vacancies/" target="_blank"
+            class="hover:text-yellow-300 transition">💼 Job Vacancies</a>
+        </li>
+        <li>
+          <a href="https://www.primehour24.com/category/technical-training/" target="_blank"
+            class="hover:text-yellow-300 transition">🛠 Technical Training</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h4 class="text-2xl font-bold border-b-2 border-yellow-400 inline-block pb-1 mb-4">Follow Us</h4>
+      <div class="flex space-x-5">
+        <a href="https://www.facebook.com/campusiconnect9" target="_blank" class="transform hover:scale-110 transition">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" class="h-8">
+        </a>
+        <a href="https://www.instagram.com/campusiconnect9" target="_blank" class="transform hover:scale-110 transition">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="h-8 rounded-full">
+        </a>
+        <a href="https://www.linkedin.com/in/campusiconnect" target="_blank" class="transform hover:scale-110 transition">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" class="h-8">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="mt-10 border-t border-white/20 pt-5 text-center">
+    <p class="text-lg font-semibold text-yellow-300 animate-pulse">🎯 100% Placement Assistance</p>
+    <p class="mt-2 text-sm text-gray-300">&copy; 2025 Campus I Connect. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- Chat Widget -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+<script src="http://localhost:8080/socket.io/socket.io.js"></script> <!-- change to your server -->
+
+<div id="ci-chat-button" class="fixed bottom-6 right-6">
+  <button id="openChat"
+    class="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-600 text-white rounded-full shadow-2xl px-5 py-3 hover:shadow-[0_0_20px_rgba(147,51,234,0.6)] transition transform hover:scale-105">
+    💬 Chat with us
+  </button>
+</div>
+
+<div id="ci-chat-panel"
+  class="fixed bottom-24 right-6 w-80 max-h-[70vh] bg-white rounded-2xl shadow-2xl border border-purple-100 hidden flex-col overflow-hidden">
+  <div class="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-600 text-white px-4 py-3 flex items-center justify-between">
+    <div>
+      <div class="font-bold">Campus I Connect</div>
+      <div class="text-xs opacity-90">Online • typically replies in minutes</div>
+    </div>
+    <button id="closeChat" class="text-white text-xl leading-none">✖</button>
+  </div>
+
+  <div class="p-3 space-y-2 bg-gray-50" id="ci-messages" style="height: 46vh; overflow-y: auto;"></div>
+
+  <div class="p-3 border-t bg-white">
+    <form id="ci-form" class="flex gap-2">
+      <input id="ci-input" class="flex-1 border rounded-xl px-3 py-2 focus:ring-2 focus:ring-purple-400"
+             placeholder="Type your message..." />
+      <button class="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Send</button>
+    </form>
+    <div id="ci-typing" class="text-xs text-gray-500 mt-1 hidden">Agent is typing…</div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    const SERVER_URL = "http://localhost:8080"; // ⬅️ replace with your backend
+    const WIDGET = {
+      button: document.getElementById("ci-chat-button"),
+      openBtn: document.getElementById("openChat"),
+      panel: document.getElementById("ci-chat-panel"),
+      closeBtn: document.getElementById("closeChat"),
+      msgs: document.getElementById("ci-messages"),
+      form: document.getElementById("ci-form"),
+      input: document.getElementById("ci-input"),
+      typing: document.getElementById("ci-typing")
+    };
+
+    // Persisted session
+    const roomId = localStorage.getItem("ci_room") || `room_${Math.random().toString(36).slice(2,10)}`;
+    localStorage.setItem("ci_room", roomId);
+    const userName = localStorage.getItem("ci_name") || `User${Math.floor(Math.random()*1000)}`;
+    localStorage.setItem("ci_name", userName);
+
+    const socket = io(SERVER_URL + "/support", { query: { role: "user", roomId, userName } });
+
+    const addMsg = (m) => {
+      const wrap = document.createElement("div");
+      const mine = m.by === "user";
+      wrap.className = `max-w-[80%] p-2 rounded-lg text-sm ${mine ? "bg-purple-600 text-white ml-auto" : "bg-white border"}`;
+      wrap.innerHTML = `<div class="text-[10px] opacity-75 mb-0.5">${m.by} • ${new Date(m.ts).toLocaleTimeString()}</div>${m.text}`;
+      WIDGET.msgs.appendChild(wrap);
+      WIDGET.msgs.scrollTop = WIDGET.msgs.scrollHeight;
+    };
+
+    // socket listeners
+    socket.on("chat:message", addMsg);
+    socket.on("chat:typing", ({ by, typing }) => {
+      if (by === "admin") {
+        WIDGET.typing.classList.toggle("hidden", !typing);
+      }
+    });
+
+    // UI events
+    WIDGET.openBtn.onclick = () => WIDGET.panel.classList.remove("hidden");
+    WIDGET.closeBtn.onclick = () => WIDGET.panel.classList.add("hidden");
+
+    let typingTimer;
+    WIDGET.input.addEventListener("input", () => {
+      socket.emit("chat:typing", true);
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(() => socket.emit("chat:typing", false), 800);
+    });
+
+    WIDGET.form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const text = WIDGET.input.value.trim();
+      if (!text) return;
+      socket.emit("chat:message", text);
+      // local echo (server bhi echo karega; double na ho isliye wait nahi)
+      addMsg({ by: "user", text, ts: new Date().toISOString() });
+      WIDGET.input.value = "";
+    });
+  })();
+</script>
+
+
+<script type="module">
+import { apiJson, apiForm, setStatus } from './api.js';
+
+// Contact form on homepage (fallback if present)
+const contactForm = document.querySelector('#contact form, form#contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = contactForm.querySelector('[name=name]')?.value || contactForm.querySelector('input[placeholder="Your Name"]')?.value;
+    const email = contactForm.querySelector('[name=email]')?.value || contactForm.querySelector('input[type="email"]')?.value;
+    const message = contactForm.querySelector('[name=message]')?.value || contactForm.querySelector('textarea')?.value;
+    try {
+      await apiJson('/api/contact','POST',{ name, email, message });
+      alert('Thanks! We will reach out soon.');
+      contactForm.reset();
+    } catch (e) { alert(e.message); }
+  });
+}
+
+// Jobs modal: wire up dynamic form if exists
+const jobForm = document.getElementById('jobApplyForm');
+const jobTitleEl = document.getElementById('jobTitle');
+if (jobForm && jobTitleEl) {
+  jobForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(jobForm);
+    const title = jobTitleEl.textContent.replace(/^Apply for\s*/,'').trim();
+    if (title) fd.append('job_title', title);
+    try {
+      await apiForm('/api/jobs/apply', fd);
+      alert('Application submitted!');
+      jobForm.reset();
+    } catch (e) { alert(e.message); }
+  });
+}
+
+// Courses modal: button with Apply Now text
+const courseBtn = Array.from(document.querySelectorAll('button')).find(b => b.textContent.includes('Apply Now'));
+if (courseBtn) {
+  courseBtn.addEventListener('click', async (ev) => {
+    if (courseBtn.getAttribute('data-wired')) return;
+    courseBtn.setAttribute('data-wired','1');
+  });
+}
+
+window.applyCourseInline = async function() {
+  const title = document.getElementById('modalTitle')?.textContent || 'Course Interest';
+  const name = prompt('Your Name?'); if (!name) return;
+  const email = prompt('Your Email?'); if (!email) return;
+  const phone = prompt('Phone (optional)') || '';
+  const note = prompt('Anything to add?') || '';
+  try {
+    await apiJson('/api/courses/apply','POST',{ course_title: title, name, email, phone, note });
+    alert('We will contact you soon!');
+  } catch (e) { alert(e.message); }
+};
+
+// Socket.IO chat widget uses backend at /support; leave page script as-is
+</script>
+
+</body>
+
+</html>
